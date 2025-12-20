@@ -37,37 +37,28 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    name: "VisitorMaker.com",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    name: "JetWait.com",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    name: "VPNHead.com",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    name: "LaWander AI",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    name: "Pociunas Insurance Services",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    name: "BridesAgency.com",
   },
   {
-    imgPath: "/images/logos/company-logo-7.png",
+    name: "Karma Credits",
   },
   {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
+    name: "We Make Good Software",
   },
 ];
 
