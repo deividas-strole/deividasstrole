@@ -28,11 +28,18 @@ const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
+// const counterItems = [
+//   { value: 15, suffix: "+", label: "Years of Experience" },
+//   { value: 200, suffix: "+", label: "Satisfied Clients" },
+//   { value: 108, suffix: "+", label: "Completed Projects" },
+//   { value: 90, suffix: "%", label: "Client Retention Rate" },
+// ];
+
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { label: "M.S. in Software Engineering" },
+  { label: "B.S. in Computer Science" },
+  { label: "B.S. in Informatics" },
+  { label: "ML/AI (Python) Certification" },
 ];
 
 const logoIconsList = [
@@ -46,7 +53,7 @@ const logoIconsList = [
     name: "VPNHead.com",
   },
   {
-    name: "LaWander AI",
+    name: "LaWander AI Travel Planner",
   },
   {
     name: "Pociunas Insurance Services",
