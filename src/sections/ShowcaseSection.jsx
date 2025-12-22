@@ -80,7 +80,7 @@ const AppShowcase = () => {
                 <div className="image-wrapper bg-black-200">
                   <img src="/images/deividas-strole-vpnhead.png" alt="YC Directory App" />
                 </div>
-                <h2>Portal for VPN Services and Information</h2>
+                <h2>vpnHead - Portal for VPN Services and Information</h2>
               </div>
             </div>
           </div>
