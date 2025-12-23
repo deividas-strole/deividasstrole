@@ -51,7 +51,7 @@ const AppShowcase = () => {
               <div className="image-wrapper overflow-hidden rounded-xl bg-black-200">
                 <img
 
-                    src="/images/deividas-strole-yeah-sc.png"
+                    src="/images/deividas-strole-yeah-sc-OLD.png"
                     alt="LaWander - AI Travel Planner"
                     className="w-full h-full object-cover"
                 />
