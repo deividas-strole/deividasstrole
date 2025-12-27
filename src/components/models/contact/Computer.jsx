@@ -3,6 +3,7 @@ import { useGLTF } from "@react-three/drei";
 export function Computer(props) {
   const { nodes, materials } = useGLTF(
     "/models/computer-optimized-transformed.glb"
+    //   "models/1970-15MB-computer-optimized-transformed.glb"
   );
 
   return (

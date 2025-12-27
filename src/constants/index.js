@@ -99,7 +99,7 @@ const abilities = [
   {
     imgPath: "/images/seo.png",
     title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    desc: "Delivering high-quality code while maintaining attention to every detail.",
   },
   {
     imgPath: "/images/chat.png",
@@ -109,7 +109,7 @@ const abilities = [
   {
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    desc: "Consistently met project deadlines without compromising code quality.",
   },
 ];
 
