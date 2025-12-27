@@ -1,3 +1,5 @@
+import { faLinkedin, faGithub, faYoutube, faDev, faMedium, faQuora, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
 const navLinks = [
   {
     name: "Work",
@@ -11,10 +13,10 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
+  // {
+  //   name: "Testimonials",
+  //   link: "#testimonials",
+  // },
 ];
 
 const words = [
@@ -144,7 +146,7 @@ const techStackIcons = [
   {
     name: "Java Developer",
     // modelPath: "/models/python-transformed.glb",
-    modelPath: "/models/java.glb",
+    modelPath: "/models/java-400kb.glb",
     scale: 1.1,
     rotation: [0, 0, 0],
   },
@@ -158,7 +160,7 @@ const techStackIcons = [
   },
   {
     name: "SQL Developer",
-    modelPath: "/models/sql.glb",
+    modelPath: "/models/sql-1mb.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
@@ -172,7 +174,7 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Deividas brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Full Stack Developer",
@@ -185,7 +187,7 @@ const expCards = [
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+    review: "Deividas's contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
     title: "WordPress Developer & SEO Specialist",
@@ -198,7 +200,7 @@ const expCards = [
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "Deividas’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     title: "IT Support & Web Administrator",
@@ -232,64 +234,103 @@ const testimonials = [
     name: "Esther Howard",
     mentions: "@estherhoward",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "I can’t say enough good things about Deividas. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
     imgPath: "/images/client1.png",
   },
   {
     name: "Wade Warren",
     mentions: "@wadewarren",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Working with Deividas was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
     imgPath: "/images/client3.png",
   },
   {
     name: "Guy Hawkins",
     mentions: "@guyhawkins",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Collaborating with Deividas was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Deividas's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Deividas is the ideal partner.",
     imgPath: "/images/client2.png",
   },
   {
     name: "Marvin McKinney",
     mentions: "@marvinmckinney",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "Deividas was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
     imgPath: "/images/client5.png",
   },
   {
     name: "Floyd Miles",
     mentions: "@floydmiles",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "Deividas’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
     imgPath: "/images/client4.png",
   },
   {
     name: "Albert Flores",
     mentions: "@albertflores",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "Deividas was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
     imgPath: "/images/client6.png",
   },
 ];
 
-const socialImgs = [
+export const socialLinks = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/in/deividas-strole',
+    icon: faLinkedin
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: 'GitHub',
+    url: 'https://github.com/deividas-strole',
+    icon: faGithub
   },
   {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: 'YouTube',
+    url: 'https://youtube.com/@deividas-strole',
+    icon: faYoutube
   },
   {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    name: 'Dev.to',
+    url: 'https://dev.to/deividas-strole',
+    icon: faDev
   },
+  {
+    name: 'Medium',
+    url: 'https://medium.com/@deividas-strole',
+    icon: faMedium
+  },
+  {
+    name: 'Quora',
+    url: 'https://quora.com/profile/Deividas-Strole',
+    icon: faQuora
+  },
+  {
+    name: 'X (Twitter)',
+    url: 'https://x.com/deividasstrole',
+    icon: faXTwitter
+  }
 ];
+
+// const socialImgs = [
+//   {
+//     name: "linkedin",
+//     imgPath: "/images/linkedin.png",
+//   },
+//   {
+//     name: "github",
+//     imgPath: "/images/github-20x20.png",
+//   },
+//   {
+//     name: "fb",
+//     imgPath: "/images/fb.png",
+//   },
+//   {
+//     name: "x",
+//     imgPath: "/images/x.png",
+//   },
+//
+// ];
 
 export {
   words,
@@ -299,7 +340,7 @@ export {
   expCards,
   expLogos,
   testimonials,
-  socialImgs,
+  // socialImgs,
   techStackIcons,
   techStackImgs,
   navLinks,
