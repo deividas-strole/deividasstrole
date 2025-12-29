@@ -173,7 +173,7 @@ section {
       }
 
       .text-content {
-        @apply space-y-5 mt-5;
+        @apply space-y-2 mt-5;
 
         .badges {
           @apply flex gap-2 mb-4;
