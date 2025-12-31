@@ -38,18 +38,6 @@ The design focuses on **speed**, **mobile-first responsive UI**, and clean, main
 
 ---
 
-## 📁 File Structure
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│ └── images/
-
-yaml
-Copy code
-
----
-
 ## 🌐 Hosting
 Deployed through **GitHub Pages** with simple update and build flow.
 
