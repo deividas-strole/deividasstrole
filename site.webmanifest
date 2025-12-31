@@ -1,29 +1,29 @@
 {
-  "name": "Your App Name",
-  "short_name": "App Name",
-  "description": "Your app description",
+  "name": "Deividas Strole - Full-Stack Developer",
+  "short_name": "Deividas Strole",
+  "description": "Full-Stack Developer specializing in Java, React, Spring, AI and AWS",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/images/favicon-16x16.png",
+      "src": "/images/favicon/deividas-strole-favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon-32x32.png",
+      "src": "/images/favicon/deividas-strole-favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/images/apple-touch-icon.png",
+      "src": "/images/favicon/deividas-strole-apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/images/favicon-512x512.png",
+      "src": "/images/favicon/deividas-strole-favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
