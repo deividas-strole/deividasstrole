@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="" />
+        <img src="/images/bg.png" alt="Deividas Strole - Shadows" />
       </div>
 
       <div className="hero-layout">
