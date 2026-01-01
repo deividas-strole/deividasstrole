@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://deividasstrole.com/sitemap.xml
