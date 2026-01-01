@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { counterItems } from "../constants";
 
-const AnimatedLabel = ({ label, delay }) => {
+// Single reusable component
+const AnimatedText = ({ text, delay, className }) => {
   const [visibleLetters, setVisibleLetters] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const letters = text.split("");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,95 +28,29 @@ const AnimatedLabel = ({ label, delay }) => {
   useEffect(() => {
     if (!isVisible) return;
 
-    const letters = label.split("");
     let currentIndex = 0;
-
     const timer = setTimeout(() => {
       const interval = setInterval(() => {
-        if (currentIndex <= letters.length) {
-          setVisibleLetters(currentIndex);
-          currentIndex++;
-        } else {
+        currentIndex++;
+        setVisibleLetters(currentIndex);
+
+        if (currentIndex > letters.length) {
           clearInterval(interval);
         }
       }, 50);
 
+      // Properly clean up both timer and interval
       return () => clearInterval(interval);
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [isVisible, label, delay]);
-
-  const letters = label.split("");
+  }, [isVisible, letters.length, delay]);
 
   return (
-      <div ref={ref} className="text-white text-2xl font-semibold">
+      <div ref={ref} className={className}>
         {letters.map((letter, index) => (
             <span
-                key={index}
-                style={{
-                  opacity: index < visibleLetters ? 1 : 0,
-                  transition: "opacity 0.1s ease-in-out",
-                }}
-            >
-          {letter}
-        </span>
-        ))}
-      </div>
-  );
-};
-
-const AnimatedSchool = ({ school, delay }) => {
-  const [visibleLetters, setVisibleLetters] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting) {
-            setIsVisible(true);
-          }
-        },
-        { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    const letters = school.split("");
-    let currentIndex = 0;
-
-    const timer = setTimeout(() => {
-      const interval = setInterval(() => {
-        if (currentIndex <= letters.length) {
-          setVisibleLetters(currentIndex);
-          currentIndex++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 50);
-
-      return () => clearInterval(interval);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [isVisible, school, delay]);
-
-  const letters = school.split("");
-
-  return (
-      <div ref={ref} className="text-blue-300 text-lg font-medium mt-2">
-        {letters.map((letter, index) => (
-            <span
-                key={index}
+                key={`${text}-${index}`}
                 style={{
                   opacity: index < visibleLetters ? 1 : 0,
                   transition: "opacity 0.1s ease-in-out",
@@ -136,8 +72,16 @@ const AnimatedCounter = () => {
                   key={index}
                   className="bg-zinc-900 rounded-lg p-9 flex flex-col justify-center"
               >
-                <AnimatedLabel label={item.label} delay={index * 200} />
-                <AnimatedSchool school={item.school} delay={index * 200 + item.label.length * 50} />
+                <AnimatedText
+                    text={item.label}
+                    delay={index * 200}
+                    className="text-white text-2xl font-semibold"
+                />
+                <AnimatedText
+                    text={item.school}
+                    delay={index * 200 + item.label.length * 50}
+                    className="text-blue-300 text-lg font-medium mt-2"
+                />
               </div>
           ))}
         </div>
