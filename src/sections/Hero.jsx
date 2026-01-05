@@ -57,7 +57,7 @@ const Hero = () => {
             </p>
 
             <Button
-              text="See My Work"
+              text="Studies & Projects"
               className="md:w-80 md:h-16 w-60 h-12"
               id="counter"
             />
