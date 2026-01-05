@@ -67,9 +67,11 @@ const Floating3DModel = () => {
     const geometry = new THREE.TorusKnotGeometry(1.5, 0.4, 150, 20);
     const material = new THREE.MeshStandardMaterial({
       color: 0x00d4ff,
+      // color: 0x601EF9,
       metalness: 0.7,
       roughness: 0.2,
       emissive: 0x002233,
+      // emissive: 0x2d0e7a,
       emissiveIntensity: 0.1
     });
     const model = new THREE.Mesh(geometry, material);
