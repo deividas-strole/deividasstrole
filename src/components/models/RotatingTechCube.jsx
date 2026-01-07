@@ -6,9 +6,21 @@ const RotatingTechCube = ({ words = ['Java', 'JavaScript', 'SQL', 'AI', 'React',
     const rendererRef = useRef(null);
     const frameIdRef = useRef(null);
     const isVisibleRef = useRef(true);
+    const [isMobile, setIsMobile] = React.useState(false); // mobile dev hiding
 
     useEffect(() => {
-        if (!containerRef.current) return;
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768); // Adjust 768 to your preferred breakpoint
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    useEffect(() => {
+        if (!containerRef.current || isMobile) return; // Add || isMobile
 
         const container = containerRef.current;
         const width = container.clientWidth;
@@ -179,7 +191,12 @@ const RotatingTechCube = ({ words = ['Java', 'JavaScript', 'SQL', 'AI', 'React',
             });
             renderer.dispose();
         };
-    }, [words]);
+    }, [words, isMobile]);
+
+    // Don't render anything on mobile
+    if (isMobile) {
+        return null;
+    }
 
     return (
         <div
