@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -15,82 +16,92 @@ import RotatingTechCube from '../components/models/RotatingTechCube';
 
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useGSAP(() => {
     gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+        ".hero-text h1",
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
     );
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="Deividas Strole - Shadows" />
-      </div>
+      <section id="hero" className="relative overflow-hidden">
+        <div className="absolute top-0 left-0 z-10">
+          <img src="/images/bg.png" alt="Deividas Strole - Shadows" />
+        </div>
 
-      <div className="hero-layout">
-        {/* LEFT: Hero Content */}
-        <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1>Full-Stack Developer</h1>
-              <h1 className="text-blue-300 font-bold">Deividas Strole</h1>
-              <h1>
-                Shaping
-                <span className="slide">
+        <div className="hero-layout">
+          {/* LEFT: Hero Content */}
+          <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+            <div className="flex flex-col gap-7">
+              <div className="hero-text">
+                <h1>Full-Stack Developer</h1>
+                <h1 className="text-blue-300 font-bold">Deividas Strole</h1>
+                <h1>
+                  Shaping
+                  <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
+                        <span
+                            key={index}
+                            className="flex items-center md:gap-3 gap-1 pb-2"
+                        >
                         <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+                            src={word.imgPath}
+                            alt="person"
+                            className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
                       </span>
                     ))}
                   </span>
                 </span>
-              </h1>
-              <h1>into Real Projects</h1>
-              {/*<h1>that Deliver Results</h1>*/}
+                </h1>
+                <h1>into Real Projects</h1>
+                {/*<h1>that Deliver Results</h1>*/}
+              </div>
+
+              <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                Hi, I’m Deividas Strole, a developer based in California with a passion for code.
+              </p>
+
+              <Button
+                  text={isMobile ? "My Path" : "Studies & Projects"}
+                  className="md:w-80 md:h-16 w-60 h-12"
+                  id="counter"
+              />
             </div>
+          </header>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Deividas Strole, a developer based in California with a passion for code.
-            </p>
+          {/* RIGHT: 3D Model or Visual */}
+          {!isMobile && (
+              <figure>
+                {/*<div className="hero-3d-layout">*/}
+                {/*<HeroExperience />*/}
+                {/*<SpinningCube />*/}
+                {/*<InteractiveCubes />*/}
+                {/*<AnimatedCube />*/}
+                {/*</div>*/}
 
-            <Button
-              text="Studies & Projects"
-              className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
-            />
-          </div>
-        </header>
+                {/*// rotating-tech-cube*/}
+                <div className="rotating-tech-cube">
+                  <RotatingTechCube />
+                </div>
+              </figure>
+          )}
+        </div>
 
-        {/* RIGHT: 3D Model or Visual */}
-        <figure>
-          {/*<div className="hero-3d-layout">*/}
-            {/*<HeroExperience />*/}
-            {/*<SpinningCube />*/}
-            {/*<InteractiveCubes />*/}
-            {/*<AnimatedCube />*/}
-          {/*</div>*/}
-
-          {/*// rotating-tech-cube*/}
-          <div className="rotating-tech-cube">
-            <RotatingTechCube />
-          </div>
-
-        </figure>
-      </div>
-
-      <AnimatedCounter />
-    </section>
+        <AnimatedCounter />
+      </section>
   );
 };
 
