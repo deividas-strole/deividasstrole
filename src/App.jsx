@@ -9,19 +9,23 @@ import LogoShowcase from "./sections/LogoShowcase";
 import FeatureCards from "./sections/FeatureCards";
 import Navbar from "./components/NavBar";
 
-const App = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <ShowcaseSection />
-    <LogoShowcase />
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    {/*<Testimonials />*/}
-    <Contact />
-    <Footer />
-  </>
-);
+const App = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+    return (
+        <>
+            <Navbar />
+            <Hero />
+            <ShowcaseSection />
+            <LogoShowcase />
+            <FeatureCards />
+            <Experience />
+            {!isMobile && <TechStack />}
+            {/*<Testimonials />*/}
+            <Contact />
+            <Footer />
+        </>
+    );
+};
 
 export default App;
