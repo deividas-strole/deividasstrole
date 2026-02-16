@@ -29,6 +29,7 @@ The design focuses on **speed**, **mobile-first responsive UI**, and clean, main
 - **HTML5** – Semantic structure, SEO-friendly markup
 - **CSS3** – Responsive layout, UI styling, animations
 - **JavaScript** – Interactive UI, dynamic content, event handling
+- **three.js** - 3D animation
 
 ### **Professional Expertise Displayed**
 - **Java**, Spring Boot, RESTful APIs, backend systems
