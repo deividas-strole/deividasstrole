@@ -2,7 +2,7 @@
 
 Official portfolio website of **Deividas Strole**, showcasing professional experience, education history, and the technologies used in full-stack development work. This site presents project examples, technical skills, and contact links for collaboration or career opportunities.
 
-Built with performance, clarity, and responsiveness in mind, this portfolio highlights practical development skills across **Java, JavaScript, and SQL**, supported by modern tooling and workflow structure.
+Built with performance, clarity, and responsiveness in mind, this portfolio highlights practical development skills across **Java, JavaScript, and SQL**, supported by modern tooling and workflow structure
 
 ---
 
