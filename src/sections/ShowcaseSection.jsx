@@ -27,6 +27,8 @@ const AppShowcase = () => {
     ];
 
     cards.forEach((card, index) => {
+      if (!card) return;
+
       gsap.fromTo(
         card,
         {
@@ -59,6 +61,7 @@ const AppShowcase = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+
             <div className="text-content">
               <h2>Y.E.A.H. - AI-Powered Customer Service Agent</h2>
               <p className="text-white-50 md:text-xl">
@@ -67,7 +70,7 @@ const AppShowcase = () => {
             </div>
           </div>
 
-          <div className="project-list-wrapper overflow-hidden">
+          <div className="project-list-wrapper">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-black-200">
                 <img
@@ -76,6 +79,7 @@ const AppShowcase = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+
               <h2>LaWander - AI Travel Planner</h2>
               <p className="text-white-50 md:text-xl">
                 Java, Spring Boot, JavaScript, React, MySQL, AWS
@@ -90,6 +94,7 @@ const AppShowcase = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+
               <h2>vpnHead - Portal for VPN Services and Information</h2>
               <p className="text-white-50 md:text-xl">
                 Java, Spring Boot, JavaScript, React, MySQL, AWS
@@ -104,6 +109,7 @@ const AppShowcase = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+
               <h2>Social Community Maker</h2>
               <p className="text-white-50 md:text-xl">
                 Java, Spring Boot, React, MySQL
