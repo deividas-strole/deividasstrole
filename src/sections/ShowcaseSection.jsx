@@ -99,7 +99,7 @@ const AppShowcase = () => {
             <div className="project" ref={socialCommunityRef}>
               <div className="image-wrapper bg-black-200">
                 <img
-                  src="/images/deividas-strole-social-community-maker.png"
+                  src="/images/deividas-strole-social-community-maker-example.png"
                   alt="Social Community Maker"
                   className="w-full h-full object-cover"
                 />
