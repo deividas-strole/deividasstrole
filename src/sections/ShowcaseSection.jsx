@@ -70,7 +70,7 @@ const AppShowcase = () => {
             </div>
           </div>
 
-          <div className="project-list-wrapper">
+          <div className="project-list-wrapper flex flex-col gap-10">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-black-200">
                 <img
