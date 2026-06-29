@@ -127,7 +127,7 @@ const AppShowcase = () => {
                 <img
                   src={`${import.meta.env.BASE_URL}images/deividas-strole-social-community-maker-example.png`}
                   alt="Social Community Maker"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-fill"
                 />
               </div>
 
