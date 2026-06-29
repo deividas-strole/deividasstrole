@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const AppShowcase = () => {
   const sectionRef = useRef(null);
   const rydeRef = useRef(null);
+  const lakeAppsRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
   const socialCommunityRef = useRef(null);
@@ -21,6 +22,7 @@ const AppShowcase = () => {
 
     const cards = [
       rydeRef.current,
+      lakeAppsRef.current,
       libraryRef.current,
       ycDirectoryRef.current,
       socialCommunityRef.current,
@@ -53,20 +55,39 @@ const AppShowcase = () => {
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
-          <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper overflow-hidden rounded-xl bg-black-200">
-              <img
-                src="/images/deividas-strole-yeah-sc-OLD.png"
-                alt="Y.E.A.H. - AI-Powered Customer Service Agent"
-                className="w-full h-full object-cover"
-              />
+          <div className="first-project-wrapper flex flex-col gap-10">
+            <div ref={rydeRef}>
+              <div className="image-wrapper overflow-hidden rounded-xl bg-black-200">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/deividas-strole-yeah-sc-OLD.png`}
+                  alt="Y.E.A.H. - AI-Powered Customer Service Agent"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="text-content">
+                <h2>Y.E.A.H. - AI-Powered Customer Service Agent</h2>
+                <p className="text-white-50 md:text-xl">
+                  Java, Spring Boot, TypeScript, React, MySQL, AWS
+                </p>
+              </div>
             </div>
 
-            <div className="text-content">
-              <h2>Y.E.A.H. - AI-Powered Customer Service Agent</h2>
-              <p className="text-white-50 md:text-xl">
-                Java, Spring Boot, TypeScript, React, MySQL, AWS
-              </p>
+            <div ref={lakeAppsRef}>
+              <div className="image-wrapper overflow-hidden rounded-xl bg-black-200">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/deividas-strole-lake-apps.png`}
+                  alt="Lake Apps"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="text-content">
+                <h2>Lake Apps</h2>
+                <p className="text-white-50 md:text-xl">
+                  JavaScript, HTML, CSS, Web Design
+                </p>
+              </div>
             </div>
           </div>
 
@@ -74,7 +95,7 @@ const AppShowcase = () => {
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-black-200">
                 <img
-                  src="/images/deividas-strole-lawander-sc.png"
+                  src={`${import.meta.env.BASE_URL}images/deividas-strole-lawander-sc.png`}
                   alt="LaWander - AI Travel Planner"
                   className="w-full h-full object-cover"
                 />
@@ -89,7 +110,7 @@ const AppShowcase = () => {
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-black-200">
                 <img
-                  src="/images/deividas-strole-vpnhead-sc.png"
+                  src={`${import.meta.env.BASE_URL}images/deividas-strole-vpnhead-sc.png`}
                   alt="vpnHead - Portal for VPN Services and Information"
                   className="w-full h-full object-cover"
                 />
@@ -104,7 +125,7 @@ const AppShowcase = () => {
             <div className="project" ref={socialCommunityRef}>
               <div className="image-wrapper bg-black-200">
                 <img
-                  src="/images/deividas-strole-social-community-maker-example.png"
+                  src={`${import.meta.env.BASE_URL}images/deividas-strole-social-community-maker-example.png`}
                   alt="Social Community Maker"
                   className="w-full h-full object-cover"
                 />
