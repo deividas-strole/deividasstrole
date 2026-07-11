@@ -317,6 +317,11 @@ export const socialLinks = [
     name: 'X (Twitter)',
     url: 'https://x.com/deividasstrole',
     icon: faXTwitter
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/deividasstrole/",
+    icon: faFacebookF,
   }
 ];
 
