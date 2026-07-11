@@ -1,4 +1,4 @@
-import { faLinkedin, faGithub, faYoutube, faDev, faMedium, faQuora, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faYoutube, faDev, faMedium, faQuora, faXTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 const navLinks = [
   {
